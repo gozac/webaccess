@@ -1,0 +1,76 @@
+{# templates/page/index.html.twig #}
+{% extends 'page/base.html.twig' %}
+
+{% block content %}
+	<div name="slider" style="width: 100%;margin-bottom: 50px">
+		<header>
+			<div class="owl-carousel owl-theme">
+				<div class="item">
+					<img src="{{ asset('images/panorama-2105955_1280.jpg') }}" alt="">
+					<div class="cover">
+						<div class="container">
+							<div class="header-content">
+								<div class="line"></div>
+								<h2>Une visibilité en ligne</h2>
+								<h1>Obtenir un site web en toute simplicité</h1>
+								<h4>Nous aidons les entrepreneurs, start-up et groupes à modeler leur projet</h4>
+							</div>
+						</div>
+					 </div>
+				</div>
+				<div class="item">
+					<img src="{{ asset('images/joy-4921086_640.jpg') }}" alt="">
+					<div class="cover">
+						<div class="container">
+							<div class="header-content">
+								<div class="animated bounceInLeft"></div>
+								<h2>Les formations de demain</h2>
+								<h1>Créer une experience d'apprentissage e-learning</h1>
+							</div>
+						</div>
+					 </div>
+				</div>
+				<div class="item">
+					<img src="{{ asset('images/world-1582347_640.jpg') }}" alt="">
+					<div class="cover">
+						<div class="container">
+							<div class="header-content">
+								<div class="animated bounceInLeft"></div>
+								<h2>Plusieurs méthode</h2>
+								<h1>Obtenez une solution web géolocaliser</h1>
+							</div>
+						</div>
+					 </div>
+				</div>
+			</div>
+		</header>
+	</div>
+	<div class="col-md-12 px-md-5 center-width">
+		<div class="home-p">
+			<h2><span>Vous</span> souhaitez créer votre site et acceder au digital ?</h2>
+			<p> Nous sommes spécialisé dans la transformation digitale des entreprises ainsi que la création de formation e-learning, nous étudions votre besoin et vous proposons les <b>solutions</b> les plus adaptés pour vous faire une vraie place dans le milieu du web.</p>
+			<p> Ces solutions vous aiderons à faire croitre <b>visibilité</b>, dévolopper votre <b>identité</b> multi-support ainsi que faciliter et <b>diversifier vos conversions.</b></p>
+		</div>
+		<div class="row">
+			<div class="col-md-8">
+				<a class="btn btn-dark btn-cta" href="{{ path('offres') }}">
+					Découvrir les offres disponibles
+				</a>
+			</div>
+			<div class="col-md-4 image-integre-1">
+				<img src="{{ asset('images/desk-1.jpg') }}" width="350px" height="350px" style="margin-top: 60px;border-radius: 50%">
+			</div>
+			<div class="col-md-12">
+				<div class="home-p">
+					<h2><span>Connaître</span> l'univer numérique</h2>
+					<p>Aujurd'hui le numerique prend une place importante dans notre quotidien et cela ne cesse d'augmenter!</p>
+					<p>Cette croissance constance qui intervient dans tout les pays du globe reflête le temps que nous passons sur internet.</p>
+					<p>Alors vous aussi n'attendez plus et obtenez une place dans ce monde numerique.
+				</div>
+				<a class="btn btn-dark btn-cta" href="{{ path('offres') }}" style="">
+					Découvrir les offres disponibles
+				</a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

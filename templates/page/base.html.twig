@@ -1,0 +1,170 @@
+{# templates/page/base.html.twig #}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}- WebAccess Côte d'Ivoire{% endblock %}</title>
+        <link rel="icon" href="{{ asset('images/webaccess.ico') }}" />
+
+        {% block shema_org %}
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "WebAccessCI",
+                "url": "https://www.webaccess.ci",
+                "knowsAbout": "Numérique",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.webaccess.ci/asset/img/logo.png"
+                },
+                "founder": {
+                    "@type": "Person",
+                    "name": "Isaac Bakayoko",
+                    "birthDate": "1993-10-07",
+                    "email": "mrgozac@gmail.com",
+                    "image": {
+                        "@type": "ImageObject",
+                        "url": "https://media-exp1.licdn.com/dms/image/C4D03AQEClKxefYXe3Q/profile-displayphoto-shrink_400_400/0/1571673457856?e=1625097600&v=beta&t=7gvvPf766DvSQvyc4mah2WcnxbelDvgTe-bxut22GWM"
+                    },
+                    "jobTitle": "Entrepreneur Digital",
+                    "telephone": "(225) 0584060850",
+                    "url": "https://www.linkedin.com/in/isaac-bakayoko-835b1397"
+                }
+            }
+            </script>
+        {% endblock %}
+
+        {% block link %}
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <script src="https://use.fontawesome.com/f627e858df.js"></script>
+                <script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+                <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+                {% block stylesheets %}
+                    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}"></style>
+                {% endblock %}
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+            <div class="container-fluid">
+                <div class="row">
+                    <div name="head" class="col-md-12 col-nopadding">
+                        <div name="fixed-contact">
+                            <div style="height: 45px"></div>
+                            <nav class="navbar fixed-top navbar-static-top navbar-expand-md navbar-dark bg-menu-top">
+                                <a class="navbar-brand" style="font-size: 14px" href="tel:+2250584060850"><i class="fa fa-phone" style="margin-right: 5px" aria-hidden="true"></i>+225 05 84 06 08 50</a>
+                                <a class="btn btn-sm btn-outline-webaccess ml-auto" type="button" href="{{ path('offres') }}">Découvrez nos offres</a>
+                            </nav>          
+                        </div>
+                        <div name="logo" class="logo-padding">
+                            <a href="{{ path('home') }}"><span style="color: #bb4400">Web</span> Acces CI</a>
+                        </div>
+                        {% block navbar%}
+                            <div name="menu" class="menu">
+                                <nav class="navbar sticky-top navbar-static-top navbar-expand-md navbar-dark bg-menu-wa">
+                                    <a class="navbar-brand" href="#"></a>
+                                    <button class="pull-left navbar-toggler navbar-left" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div class="collapse navbar-collapse" id="navbarNav">
+                                        <ul class="navbar-nav ml-auto">
+                                            <li class="nav-item ml-auto">
+                                                <a class="nav-link" href="{{ path('home') }}">Acceuil<span class="sr-only">(current-template-add-active-class)</span></a>
+                                            </li>
+                                            <li class="nav-item ml-auto">
+                                                <a class="nav-link" href="{{ path('about') }}">Présentation</a>
+                                            </li>
+                                            <li class="nav-item ml-auto">
+                                                <a class="nav-link" href="{{ path('offres') }}">Offres</a>
+                                            </li>
+                                            <li class="nav-item ml-auto">
+                                                <a class="nav-link" href="{{ path('contact') }}">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        {% endblock %}
+                    </div>
+                    <div name="content" class="col-md-12 col-nopadding" style="overflow: hidden;">
+                        {% block content %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+
+            {% block footer %}
+                <div name="footer">
+                    <footer class="site-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-8 col-md-9" style="width: 70%">
+                                    <h6>À propos</h6>
+                                    <p class="text-justify"><i style="color: #bb4400">Webaccess.ci</i> est une initiative pour accompagner le développement du numerique en Côte d'Ivoire et plus généralement en Afrique de l'ouest. Webaccess concentre ses actions sur la création d'une solution sur mesure qui puisse convenir au objectifs et enjeux de chacun. Nous allons accompagner vos projets et vous aidez à réaliser une transition digitale pertinente grâce au multiples solutions que nous proposons.</p>
+                                </div>
+
+                                <div class="col-sm-4 col-md-3" style="width: 25%;padding-left: 0px">
+                                    <h6>Menu</h6>
+                                    <ul class="footer-links">
+                                        <li><a href="{{ path('home') }}">Acceuil</a></li>
+                                        <li><a href="{{ path('about') }}">Présentation</a></li>
+                                        <li><a href="{{ path('offres') }}">Offres</a></li>
+                                        <li><a href="{{ path('contact') }}">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-6 col-xs-12">
+                                    <p class="copyright-text">Copyright &copy; 2021 Tout droits reservés par 
+                             <a href="#">Web acces ci</a>.
+                                    </p>
+                                </div>
+
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <ul class="social-icons">
+                                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="linkedin" href="https://www.linkedin.com/in/isaac-bakayoko-835b1397"><i class="fa fa-linkedin"></i></a></li>   
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            {% endblock %}
+        {% endblock %}
+
+        {% block carousel %}
+            <script type="text/javascript">
+                $('.owl-carousel').owlCarousel({
+              loop: true,
+              margin: 0,
+              dots: false,
+              nav: true,
+              mouseDrag: false,
+              autoplay: true,
+              animateOut: 'slideOutUp',
+              responsive: {
+                0: {
+                  items: 1
+                },
+                600: {
+                  items: 1
+                },
+                1000: {
+                  items: 1
+                }
+              }
+            });
+            </script>
+        {% endblock %}
+    </body>
+</html>
