@@ -88,7 +88,7 @@ class PageController extends AbstractController
 
             $email = (new Email())
             ->from(new Address('contact@webaccess.ci', 'Web Access Ci'))
-            ->to('mrgozac@gmail.com')
+            ->to('webaccessci@gmail.com')
             ->subject('[WebAccessCi] Demande de contact '.$form->get("name")->getData())
             ->text($form->get("name")->getData().'vous a contacté le '.$now->format('d-m-Y').'\n En indiquant:\n'.$form->get("content")->getData()."\n email: ".$form->get("email")->getData());
 
