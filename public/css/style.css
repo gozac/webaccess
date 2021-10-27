@@ -119,6 +119,7 @@ h2 {
 
 .home-p {
   font-size: 16px;
+  margin-bottom: 70px;
 }
 
 .home-p h2 {
@@ -213,7 +214,7 @@ h2 {
   margin-left:6px;
   margin-right:0;
   border-radius:100%;
-  background-color:#33353d
+  background-color:#bb4400; 
 }
 .copyright-text
 {
@@ -258,7 +259,7 @@ h2 {
 }
 .social-icons a{
   background-color:#eceeef;
-  color:#818a91;
+  color:black;
   font-size:16px;
   display:inline-block;
   line-height:44px;

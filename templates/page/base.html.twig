@@ -25,7 +25,7 @@
                     "email": "mrgozac@gmail.com",
                     "image": {
                         "@type": "ImageObject",
-                        "url": "https://media-exp1.licdn.com/dms/image/C4D03AQEClKxefYXe3Q/profile-displayphoto-shrink_400_400/0/1571673457856?e=1625097600&v=beta&t=7gvvPf766DvSQvyc4mah2WcnxbelDvgTe-bxut22GWM"
+                        "url": "http://www.webacces.ci/images/isaac-buste.jpg"
                     },
                     "jobTitle": "Entrepreneur Digital",
                     "telephone": "(225) 0584060850",
@@ -62,18 +62,17 @@
                                 <a class="btn btn-sm btn-outline-webaccess ml-auto" type="button" href="{{ path('offres') }}">Découvrez nos offres</a>
                             </nav>          
                         </div>
-                        <div name="logo" class="logo-padding">
-                            <a href="{{ path('home') }}"><span style="color: #bb4400">Web</span> Acces CI</a>
-                        </div>
                         {% block navbar%}
                             <div name="menu" class="menu">
                                 <nav class="navbar sticky-top navbar-static-top navbar-expand-md navbar-dark bg-menu-wa">
-                                    <a class="navbar-brand" href="#"></a>
+                                    <div name="logo" class="navbar-brand logo-padding">
+                                        <a href="{{ path('home') }}"><span style="color: #bb4400">Web</span><span style="color: black"> Acces CI</span></a>
+                                    </div>
                                     <button class="pull-left navbar-toggler navbar-left" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
                                         <span class="navbar-toggler-icon"></span>
                                     </button>
                                     <div class="collapse navbar-collapse" id="navbarNav">
-                                        <ul class="navbar-nav ml-auto">
+                                        <ul class="navbar-nav ml-auto" style="font-size: 2rem">
                                             <li class="nav-item ml-auto">
                                                 <a class="nav-link" href="{{ path('home') }}">Accueil<span class="sr-only">(current-template-add-active-class)</span></a>
                                             </li>
@@ -108,7 +107,7 @@
                                     <p class="text-justify"><i style="color: #bb4400">Webaccess.ci</i> est une initiative pour accompagner le développement du numérique en Côte d'Ivoire et plus généralement en Afrique de l'ouest. Webaccess concentre ses actions sur la création d'une solution sur mesure qui puisse convenir aux objectifs et enjeux de chacun. Nous allons accompagner vos projets et vous aider à réaliser une transition digitale pertinente grâce aux multiples solutions que nous proposons.</p>
                                 </div>
 
-                                <div class="col-sm-4 col-md-3" style="width: 25%;padding-left: 0px">
+                                <div class="col-sm-4 col-md-3" style="width: 25%;padding-left: 0px;text-align: right;">
                                     <h6>Menu</h6>
                                     <ul class="footer-links">
                                         <li><a href="{{ path('home') }}">Accueil</a></li>
@@ -130,9 +129,9 @@
 
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <ul class="social-icons">
-                                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a class="linkedin" href="https://www.linkedin.com/in/isaac-bakayoko-835b1397"><i class="fa fa-linkedin"></i></a></li>   
+                                        <li><a class="facebook" href="www.facebook.com/webaccessCI"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a class="twitter" href="twitter.com/_gozac"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="linkedin" href="www.linkedin.com/company/76567103"><i class="fa fa-linkedin"></i></a></li>   
                                     </ul>
                                 </div>
                             </div>
