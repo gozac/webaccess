@@ -6,6 +6,16 @@
         <title>{% block title %}- WebAccess Côte d'Ivoire{% endblock %}</title>
         <link rel="icon" href="{{ asset('images/webaccess.ico') }}" />
 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSKLE1ZCPG"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-QSKLE1ZCPG');
+        </script>
+
         {% block shema_org %}
             <script type="application/ld+json">
             {
