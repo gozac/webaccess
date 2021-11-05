@@ -51,6 +51,15 @@ class PageController extends AbstractController
     }
 
     /**
+     * @Route("/portfolio", name="portfolio")
+     */
+    public function portfolio(): Response
+    {
+
+        return $this->render('page/portfolio.html.twig');
+    }
+
+    /**
      * @Route("/contact_success", name="contact_success")
      */
     public function contact_success(): Response
