@@ -1,0 +1,27 @@
+{% extends 'page/base.html.twig' %}
+
+  {% block headplus %}
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="{{ asset('js/TemplateData/style.css') }}">
+    <script src="{{ asset('js/TemplateData/UnityProgress.js') }}"></script>
+    <script src="{{ asset('js/Build/UnityLoader.js') }}"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "{{ asset('js/Build/web2.json') }}", {onProgress: UnityProgress});
+    </script>
+  {% endblock %}
+
+
+  {% block content %}
+  <h2>Voici une version html5 du serious game Gestes Barrières</h2>
+  <p>Cette version etant un portage du jeu mobile le menu de départ n'est pas proprement calibré</p>
+  <div style="width: 450;height: 1000px">
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 433px; height: 900px"></div>
+      <div class="footer">
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Gestes Barrières</div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

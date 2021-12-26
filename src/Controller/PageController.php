@@ -23,6 +23,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class PageController extends AbstractController
 {
+
     /**
      * @Route("", name="home")
      */
@@ -32,6 +33,23 @@ class PageController extends AbstractController
         return $this->render('page/index.html.twig');
     }
 
+    /**
+     * @Route("/privacy", name="privacy")
+     */
+    public function privacy(): Response
+    {
+
+        return $this->render('page/privacy.html.twig');
+    }
+
+    /**
+     * @Route("/gestes", name="gestes")
+     */
+    public function gestes(): Response
+    {
+
+        return $this->render('page/gestes.html.twig');
+    }
     /**
      * @Route("/offres", name="offres")
      */
